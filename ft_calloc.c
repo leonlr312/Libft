@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 09:40:33 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 13:26:01 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/08 12:00:09 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	number;
 
 	number = nitems * size;
-	if (nitems != 0 && number / nitems != 0)
+	if (nitems != 0 && number / nitems != size)
 		return (NULL);
 	ptr = malloc(number);
 	if (!ptr)

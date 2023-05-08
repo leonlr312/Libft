@@ -6,13 +6,14 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:47:17 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 14:09:43 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:06:36 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 int				ft_isalpha(int c);
 int				ft_isascii(char c);
@@ -38,5 +39,16 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 char			*ft_strrchr(const char *str, int c);
 int				ft_strlen(char *str);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			**ft_split(char const *s, char c);
+char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif

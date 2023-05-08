@@ -20,20 +20,28 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 
 	index = 0;
 	dest1 = (char *)str1;
-	dest2 = (char *)str2;
+	dest2 = (const char *)str2;
 	if (str1 == 0 && str2 == 0)
 		return (str1);
-	while (index < n)
+	if (dest1 > dest2)
 	{
-		dest1[index] = dest2[index];
-		index++;
+		while (n--)
+		{
+			dest1[n] = dest2[n];
+		}
 	}
+	else
+		while (index < n)
+		{
+			dest1[index] = dest2[index];
+			index++;
+		}
 	return (str1);
 }
 
 // #include<stdio.h>
 // int main(void)
-// {
+// { str [] = "banana clovao 12345"
 // 	char str1[] = "banana";
 // 	char str2[] = "clovao";
 

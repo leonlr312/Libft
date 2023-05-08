@@ -14,27 +14,19 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		count;
-	int			counter;
-	const char	*temp;
-	char		*str1;
-	char		*str2;
+	size_t	count;
+	size_t	len_little;
 
 	count = 0;
-	counter = 0;
-	str1 = (char *)big;
-	str2 = (char *)little;
-	while (count < len)
+	len_little = ft_strlen((char *)little);
+	if (len_little == 0)
+		return ((char *)big);
+	while (count < len && big[count] != 0 && len - count >= len_little)
 	{
-		if (str1[count] == str2[counter])
+		if (big[count] == little[0])
 		{
-			temp = (char *) &big[count];
-			while (count < len)
-			{
-				count++;
-				if (++counter == ft_strlen(str2))
-					return ((char *)temp);
-			}
+			if (ft_strncmp((char *)big + count, (char *)little, len_little) == 0)
+				return ((char *)big + count);
 		}
 		count++;
 	}
@@ -46,7 +38,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // int	main(void)
 // {
-// 	const char	big[20] = "TutorialsPoint";
+// 	const char	big[20] = "PutorialsPoint";
 
 // 	printf("The substring is: %s\n", ft_strnstr(big, "t", 3)); // torialsPoint
 // 	printf("The substring is: %s\n", ft_strnstr(big, "Point", 14)); // Point

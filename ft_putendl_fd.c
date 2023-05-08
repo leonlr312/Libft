@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 11:41:16 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 14:09:03 by leoda-lu         ###   ########.fr       */
+/*   Created: 2023/05/08 16:02:35 by leoda-lu          #+#    #+#             */
+/*   Updated: 2023/05/08 16:06:13 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+#include"libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (c == ' ' || ('\t' <= c && c <= '\r'));
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

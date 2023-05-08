@@ -15,11 +15,11 @@
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	size_t	count;
-	char	*dest1;
-	char	*dest2;
+	unsigned char	*dest1;
+	unsigned char	*dest2;
 
-	dest1 = (char *)str1;
-	dest2 = (char *)str2;
+	dest1 = (unsigned char *)str1;
+	dest2 = (unsigned char *)str2;
 	count = 0;
 	while (count < n)
 	{

@@ -1,16 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/26 10:30:39 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 15:56:04 by leoda-lu         ###   ########.fr       */
+/*   Created: 2023/05/08 15:11:18 by leoda-lu          #+#    #+#             */
+/*   Updated: 2023/05/08 15:36:45 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include"libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	return (c >= ' ' && c <= '~');
+	int		index;
+	int		s_len;
+	char	*temp;
+
+	if (s == 0)
+		return (NULL);
+	index = 0;
+	s_len = ft_strlen((char *)s);
+	temp = (char *)malloc(sizeof(char) * s_len + 1);
+	if (temp == 0)
+		return (NULL);
+	while (s[index])
+	{
+		temp[index] = f(index, s[index]);
+		index++;
+	}
+	temp[index] = 0;
+	return (temp);
 }

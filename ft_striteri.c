@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/26 10:30:39 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 15:56:04 by leoda-lu         ###   ########.fr       */
+/*   Created: 2023/05/08 15:39:28 by leoda-lu          #+#    #+#             */
+/*   Updated: 2023/05/08 15:46:49 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include"libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	return (c >= ' ' && c <= '~');
+	int		index;
+
+	if (s == 0)
+		return ;
+	index = 0;
+	while (s[index])
+	{
+		f(index, &s[index]);
+		index++;
+	}
 }

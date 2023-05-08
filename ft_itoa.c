@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 12:49:18 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 14:58:14 by leoda-lu         ###   ########.fr       */
+/*   Created: 2023/05/08 12:17:08 by leoda-lu          #+#    #+#             */
+/*   Updated: 2023/05/08 15:09:45 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_itoa(int n)
 {
-	unsigned int	count;
-	unsigned int	len1;
+	char	buffer[12];
+	char	sinal;
+	int		index;
 
-	count = 0;
-	len1 = ft_strlen(src);
-	if (size > 0)
+	if (n == 0)
+		return (ft_strdup("0"));
+	sinal = 0;
+	index = 12;
+	buffer[--index] = '\0';
+	if (n < 0)
 	{
-		while (count < size - 1 && src[count] != 0)
-		{
-			dest[count] = src[count];
-			count++;
-		}
-		dest[count] = 0;
+		buffer[--index] = (n % 10) * -1 + '0';
+		n /= 10;
+		n = n * -1;
+		sinal = '-';
 	}
-	return (len1);
+	while (n != 0)
+	{
+		buffer[--index] = (n % 10) + '0';
+		n /= 10;
+	}
+	if (sinal == '-')
+		buffer[--index] = sinal;
+	return (ft_strdup(&buffer[index]));
 }

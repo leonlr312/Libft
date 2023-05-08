@@ -18,6 +18,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned char	len_src;
 	unsigned char	len_dest;
 
+	if (size == 0 && dest == 0)
+		return (0);
 	count = 0;
 	len_src = ft_strlen(src);
 	len_dest = ft_strlen(dest);
@@ -29,7 +31,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 			count++;
 		}
 		dest[count + len_dest] = 0;
-		return (len_src + len_dest[dest] - count);
+		return (len_src + len_dest);
 	}
 	return (len_src + size);
 }
