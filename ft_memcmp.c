@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:00:41 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 16:09:15 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/08 17:09:22 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t	count;
+	size_t			count;
 	unsigned char	*dest1;
 	unsigned char	*dest2;
 

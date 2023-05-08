@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:14:50 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 14:09:34 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/08 17:13:31 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	numb = 0;
-	while (ft_isspace(str[i]))
+	while (str[i] == ' ' || ('\t' <= str[i] && str[i] <= '\r'))
 	{
 		i++;
 	}
