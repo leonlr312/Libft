@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 13:51:51 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/08 17:09:38 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/09 10:08:59 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,19 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 		}
 	}
 	else
+	{
 		while (index < n)
 		{
 			dest1[index] = dest2[index];
 			index++;
 		}
+	}
 	return (str1);
 }
 
 // #include<stdio.h>
 // int main(void)
-// { str [] = "banana clovao 12345"
+// {
 // 	char str1[] = "banana";
 // 	char str2[] = "clovao";
 
