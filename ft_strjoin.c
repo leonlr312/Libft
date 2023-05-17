@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:20 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/08 13:51:05 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(str + s1_len, s2, s2_len + 1);
 	return (str);
 }
-
-// #include<stdio.h>
-// int main(void)
-// {
-// 	char s1[] = "Leon ";
-// 	char s2[] = "da Luz";
-
-// 	printf("%s\n", ft_strjoin(s1, s2));
-// }

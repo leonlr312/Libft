@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 10:02:03 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/08 17:10:35 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <bsd/string.h>
-
-// int	main(void)
-// {
-// 	const char	big[20] = "PutorialsPoint";
-
-// 	printf("The substring is: %s\n", ft_strnstr(big, "t", 3)); // torialsPoint
-// 	printf("The substring is: %s\n", ft_strnstr(big, "Point", 14)); // Point
-// 	printf("The substring is: %s\n", ft_strnstr(big, "Point", 3)); // (null)
-// 	printf("The substring is: %s\n", ft_strnstr(big, "Point", 10)); // (null)
-// 	return (0);
-// }

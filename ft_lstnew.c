@@ -6,12 +6,12 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 09:40:27 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/09 10:38:49 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:32 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
+#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {

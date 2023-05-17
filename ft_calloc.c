@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 09:40:33 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/08 12:00:09 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 12:16:50 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	number;
 
 	number = nitems * size;
-	if (nitems != 0 && number / nitems != size)
+	if (nitems == 0 || size == 0)
+		return (malloc(0));
+	if (number / nitems != size)
 		return (NULL);
 	ptr = malloc(number);
 	if (!ptr)
@@ -26,28 +28,3 @@ void	*ft_calloc(size_t nitems, size_t size)
 	ft_bzero(ptr, number);
 	return (ptr);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-
-// int main () {
-//    int i, n;
-//    int *a;
-
-//    printf("Number of elements to be entered:");
-//    scanf("%d",&n);
-
-//    a = (int*)ft_calloc(n, sizeof(int));
-//    printf("Enter %d numbers:\n",n);
-//    for( i=0 ; i < n ; i++ ) {
-//       scanf("%d",&a[i]);
-//    }
-
-//    printf("The numbers entered are: ");
-//    for( i=0 ; i < n ; i++ ) {
-//       printf("%d ",a[i]);
-//    }
-//    free( a );
-
-//    return(0);
-// }

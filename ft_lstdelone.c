@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 10:48:01 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/09 13:40:22 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:32 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	
+	if (lst != 0 && del != 0)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

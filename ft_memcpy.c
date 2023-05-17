@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 11:46:16 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/03 14:39:02 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:32 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,29 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include<stdio.h>
-// #include<string.h>
-
-// int	ft_strlen(char *src)
-// {
-// 	unsigned char	index;
-
-// 	index = 0;
-// 	while (src[index] != '\0')
-// 	{
-// 		index++;
-// 	}
-// 	return (index);
-// }
-
-// int	main(void)
-// {
-// 	char	src[] = "banana";
-// 	char	dest[] = "clovao";
-
-// 	printf("Before memcpy dest = %s\n", dest);
-// 	ft_memcpy(dest, src, ft_strlen(src + 1));
-// 	printf("After memcpy dest = %s\n", dest);
-// 	return (0);
-// }

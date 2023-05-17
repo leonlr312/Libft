@@ -6,13 +6,13 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:14 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/08 12:12:16 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_count(char const *s, char c)
+static int	ft_count(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -28,7 +28,7 @@ int	ft_count(char const *s, char c)
 	return (count);
 }
 
-char	*ft_strndup(const char *src, size_t n)
+static char	*ft_strndup(const char *src, size_t n)
 {
 	unsigned int		index;
 	char				*dest;
@@ -75,18 +75,3 @@ char	**ft_split(char const *s, char c)
 	tab[count] = 0;
 	return (tab);
 }
-
-// #include<stdio.h>
-// int	main(void)
-// {
-// 	char s[] = "****Kikutz***Leon***Nathan***";
-// 	char c = '*';
-// 	char **ret;
-// 	size_t index;
-
-// 	index = 0;
-// 	ret = ft_split(s, c);
-// 	while (ret[index] != 0)
-// 		printf("%s, ", ret[index++]);
-// 	return (0);
-// }

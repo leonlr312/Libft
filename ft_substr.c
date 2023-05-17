@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:37 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/08 10:25:19 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[index] = 0;
 	return (str);
 }
-
-// #include<stdio.h>
-// int main(void)
-// {
-// 	char s[] = "Banana";
-// 	char	*ret;
-
-// 	ret = ft_substr(s, 5, 2);
-// 	printf("%s\n", ret);
-// }
