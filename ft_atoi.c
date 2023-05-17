@@ -6,13 +6,13 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:14:50 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:11:20 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	numb;
 	int	i;

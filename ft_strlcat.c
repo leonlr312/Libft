@@ -6,13 +6,13 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:00:36 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:12:52 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
 	unsigned char	count;
 	unsigned char	len_src;

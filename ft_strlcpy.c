@@ -6,13 +6,13 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:49:18 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:31:24 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	unsigned int	count;
 	unsigned int	len1;

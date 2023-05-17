@@ -6,13 +6,11 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:46:06 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/04/24 12:51:47 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:15:35 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	unsigned char	*dest1;
 	unsigned char	*dest2;

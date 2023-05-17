@@ -6,13 +6,13 @@
 #    By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:41:38 by leoda-lu          #+#    #+#              #
-#    Updated: 2023/05/17 12:03:34 by leoda-lu         ###   ########.fr        #
+#    Updated: 2023/05/17 18:56:31 by leoda-lu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-so:
-	$(CC) -I. -nostartfiles -fPIC $(CFLAGS) -c *.c
-	gcc -nostartfiles -shared -o libft.so *.o
+# so:
+# 	$(CC) -I. -nostartfiles -fPIC $(CFLAGS) -c *.c
+# 	gcc -nostartfiles -shared -o libft.so *.o
 
 NAME = libft.a
 CC = gcc

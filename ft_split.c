@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:14 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 10:39:22 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:43:17 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,57 +21,63 @@ static int	ft_count(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] == c)
+			i++;
+		else
+		{
 			count++;
-		i++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
 	}
 	return (count);
 }
 
-static char	*ft_strndup(const char *src, size_t n)
+int	ft_move(char **words, const char *s, int len, int *j)
 {
-	unsigned int		index;
-	char				*dest;
+	int	i;
 
-	if (src == 0)
-		return (NULL);
-	index = 0;
-	dest = malloc(ft_strlen((char *)src) + 1);
-	if (dest == 0)
-		return (0);
-	while (index < n)
+	words[*j] = (char *)malloc((len + 1) * sizeof(char));
+	if (words == 0)
 	{
-		dest[index] = src[index];
-		index++;
+		i = 0;
+		while (*j > i)
+		{
+			free(words[i++]);
+		}
+		return (1);
 	}
-	dest[index] = '\0';
-	return (dest);
+	ft_memcpy(words[*j], s, len);
+	words[*j][len] = 0;
+	(*j)++;
+	return (0);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
-	int		index;
-	int		count;
-	int		len;
-	char	**tab;
+	int		i;
+	int		j;
+	int		k;
+	char	**words;
 
-	if (s == 0)
+	words = (char **)malloc((ft_count(s, c) + 1) * sizeof(char *));
+	if (words == NULL)
 		return (NULL);
-	index = 0;
-	count = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_count(s, c)) + 1);
-	if (tab == 0)
-		return (NULL);
-	while (s[index])
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		while (s[index] == c)
-			index++;
-		len = index;
-		while (s[index] && s[index] != c)
-			index++;
-		if (index > len)
-			tab[count++] = ft_strndup(s + len, index - len);
+		while (s[i] == c)
+			i++;
+		k = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > k)
+		{
+			if (ft_move(words, s + k, i - k, &j))
+				break ;
+		}
 	}
-	tab[count] = 0;
-	return (tab);
+	words[j] = NULL;
+	return (words);
 }
