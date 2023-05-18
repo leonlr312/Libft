@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:14 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/18 09:51:58 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/18 10:35:26 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,51 +33,51 @@ static int	ft_count(char const *s, char c)
 	return (count);
 }
 
-static int	ft_move(char **words, const char *s, int len, int *j)
+static int	ft_move(char **str, const char *s, int len, int *count)
 {
 	int	i;
 
-	words[*j] = (char *)malloc((len + 1) * sizeof(char));
-	if (words == 0)
+	str[*count] = (char *)malloc((len + 1) * sizeof(char));
+	if (str == 0)
 	{
 		i = 0;
-		while (*j > i)
+		while (*count > i)
 		{
-			free(words[i++]);
+			free(str[i++]);
 		}
 		return (1);
 	}
-	ft_memcpy(words[*j], s, len);
-	words[*j][len] = 0;
-	(*j)++;
+	ft_memcpy(str[*count], s, len);
+	str[*count][len] = 0;
+	(*count)++;
 	return (0);
 }
 
 char	**ft_split(const char *s, char c)
 {
-	int		i;
-	int		j;
-	int		k;
-	char	**words;
+	int		index;
+	int		count;
+	int		size;
+	char	**str;
 
-	words = (char **)malloc((ft_count(s, c) + 1) * sizeof(char *));
-	if (words == NULL)
+	str = (char **)malloc((ft_count(s, c) + 1) * sizeof(char *));
+	if (str == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	index = 0;
+	count = 0;
+	while (s[index])
 	{
-		while (s[i] == c)
-			i++;
-		k = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > k)
+		while (s[index] == c)
+			index++;
+		size = index;
+		while (s[index] && s[index] != c)
+			index++;
+		if (index > size)
 		{
-			if (ft_move(words, s + k, i - k, &j))
+			if (ft_move(str, s + size, index - size, &count))
 				break ;
 		}
 	}
-	words[j] = NULL;
-	return (words);
+	str[count] = NULL;
+	return (str);
 }
