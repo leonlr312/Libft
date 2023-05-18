@@ -6,13 +6,13 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:37 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 17:02:18 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/17 19:36:29 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t num)
+static char	*ft_strncpy(char *dest, const char *src, size_t num)
 {
 	char	*ptr;
 

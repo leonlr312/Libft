@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:14 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 18:43:17 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/18 09:51:58 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_count(char const *s, char c)
 	return (count);
 }
 
-int	ft_move(char **words, const char *s, int len, int *j)
+static int	ft_move(char **words, const char *s, int len, int *j)
 {
 	int	i;
 
