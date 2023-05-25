@@ -6,7 +6,7 @@
 #    By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/20 01:41:43 by leoda-lu          #+#    #+#              #
-#    Updated: 2023/05/23 19:42:35 by leoda-lu         ###   ########.fr        #
+#    Updated: 2023/05/25 09:58:08 by leoda-lu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,8 +50,4 @@ fclean: clean
 
 re: fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
-	
 .PHONY: all bonus clean fclean re
