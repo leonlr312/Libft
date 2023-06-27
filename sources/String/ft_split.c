@@ -6,7 +6,7 @@
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:42:14 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/25 09:41:19 by leoda-lu         ###   ########.fr       */
+/*   Updated: 2023/05/28 13:26:24 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static int	ft_move(char **str, const char *s, int len, int *count)
 		}
 		return (1);
 	}
-	ft_memcpy(str[*count], s, len);
+	ft_memmove(str[*count], s, len);
 	str[*count][len] = 0;
 	(*count)++;
 	return (0);

@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_handle_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 15:59:02 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/17 10:39:32 by leoda-lu         ###   ########.fr       */
+/*   Created: 2023/06/20 13:01:40 by leoda-lu          #+#    #+#             */
+/*   Updated: 2023/06/27 09:56:22 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_handle_string(char *str)
 {
-	unsigned char	index;
-
-	if (s == 0)
-		return ;
-	index = 0;
-	while (s[index] != '\0')
+	if (!str)
 	{
-		write(fd, &s[index], 1);
-		index++;
+		ft_putstr_fd("(null)", 1);
+		return (6);
 	}
+	ft_putstr_fd(str, 1);
+	return (ft_strlen(str));
 }

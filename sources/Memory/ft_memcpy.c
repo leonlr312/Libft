@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoda-lu <leoda-lu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 09:40:27 by leoda-lu          #+#    #+#             */
-/*   Updated: 2023/05/22 11:23:34 by leoda-lu         ###   ########.fr       */
+/*   Created: 2023/04/26 11:46:16 by leoda-lu          #+#    #+#             */
+/*   Updated: 2023/05/28 13:26:24 by leoda-lu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	t_list	*node;
+	size_t	count;
+	char	*dest1;
+	char	*src1;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (node == 0)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	count = 0;
+	dest1 = (char *)dest;
+	src1 = (char *)src;
+	if (dest == 0 && src == 0)
+		return (dest);
+	while (count < n)
+	{
+		dest1[count] = src1[count];
+		count++;
+	}
+	return (dest);
 }
